@@ -1,0 +1,122 @@
+<html>
+<head>
+<style>
+            .tabs {
+                position: absolute;   
+                min-height: 200px; /* This part sucks */
+                clear: both;
+                margin: 0px;
+                width: 450px;
+            }
+            .tab {
+                float: left;
+            }
+            .tabLabel {
+                background: #eee; 
+                padding: 10px; 
+                border: 1px solid #ccc; 
+                margin-left: -1px; 
+                position: relative;
+                left: 1px; 
+            }
+            .tab [type=radio] {
+                display: none;   
+            }
+            .content {
+                position: absolute;
+                top: 28px;
+                left: 0;
+                background: white;
+                right: 0;
+                bottom: 0;
+                border: 1px solid #ccc; 
+            }
+            
+            [type=radio]:checked ~ label {
+                background: white;
+                border-bottom: 1px solid white;
+                z-index: 2;
+            }
+            [type=radio]:checked ~ label ~ .content {
+                z-index: 1;
+            }
+            </style>
+</head>
+<body>
+<div id="containerDiv" >
+        
+                       <div id="container1" class="tabs" style="height: 280px;">
+                           <div class="tab">
+                               <input type="radio" id="tab-2" name="tab-group-1" checked="checked"/>
+                               <label class="tabLabel" for="tab-2">Tab 2</label>
+
+                               <div class="content">
+                                  
+                               </div> 
+                           </div>
+
+                           <div class="tab">
+                               <input type="radio" id="tab-3" name="tab-group-1"/>
+                               <label class="tabLabel" for="tab-3">Tab 3</label>
+
+                               <div class="content">
+                                   
+                               </div> 
+                           </div>
+                           
+                           <div class="tab">
+                               <input type="radio" id="tab-1" name="tab-group-1"/>
+                               <label class="tabLabel" for="tab-1">Tab 1</label>
+
+                               <div class="content" >
+                                   
+                               </div> 
+                           </div>
+                       </div>
+
+                       <div id="container2"  class="tabs" style="height:570px;width:875px;float:right;left:480px">
+
+                           <div class="tab" style="float:right">
+                               <input type="radio" id="tab-4" name="tab-group-2" checked="checked" onclick="hideApplet('tab-4')"/>
+                               <label class="tabLabel" for="tab-4">Tab 4</label>
+
+                               <div class="content">
+                                   stuff4
+                               </div> 
+                           </div>
+
+                           <div id="docParentDiv" class="tab" style="float:right">
+                               <input type="radio" id="tab-5" name="tab-group-2" onclick="hideApplet('tab-5')"/>
+                               <label class="tabLabel" for="tab-5">TAB 5</label>
+
+                               <div id="docDiv" class="content">
+
+                               </div> 
+                           </div>
+
+                           <div class="tab" style="float:right">
+                               <input type="radio" id="tab-6" name="tab-group-2" onclick="hideApplet('tab-6')"/>
+                               <label class="tabLabel" for="tab-6">TAB 6</label>
+
+                               <div id="formDiv" class="content">
+
+                               </div> 
+                           </div>
+
+                           <div class="tab" style="float:right;#{wDWorkdeskView.m_objCurrentWorkitem.workitem.taskId eq ''?'display:none':''}">
+                               <input type="radio" id="tab-7" name="tab-group-2" onclick="hideApplet('tab-7')"/>
+                               <label class="tabLabel" for="tab-7">TAB 7</label>
+                               <div id="taskDiv" class="content">
+
+                               </div> 
+                           </div>
+                       </div>
+
+                       <div id="container3"  class="tabs" style="height: 280px;top:290px">
+                           <div class="content" >
+                               
+                           </div> 
+                       </div>
+                  </div>
+</body>
+</html
